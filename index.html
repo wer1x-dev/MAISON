@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MAISON ÉCRU — Quiet luxury, made in Almaty</title>
+<meta name="description" content="MAISON ÉCRU is a small-batch clothing atelier in Almaty. Considered silhouettes, natural fibres and a palette borrowed from late autumn." />
+<meta name="theme-color" content="#f5f0e8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ink:#17140f;--ink-70:rgba(23,20,15,.7);--ink-55:rgba(23,20,15,.55);--ink-35:rgba(23,20,15,.35);--ink-14:rgba(23,20,15,.14);--ink-08:rgba(23,20,15,.08);
+  --ivory:#f5f0e8;--paper:#fbf8f3;--bone:#eae1d3;--sand:#ded2c0;--clay:#a2603f;--sage:#7c8571;
+  --cream:#f5f0e8;--cream-60:rgba(245,240,232,.6);--cream-30:rgba(245,240,232,.3);--cream-16:rgba(245,240,232,.16);
+  --display:"Cormorant Garamond","Times New Roman",serif;--sans:"Jost","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--gutter:clamp(20px,4.2vw,68px);--max:1560px;--section:clamp(68px,8vw,126px);--header:74px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:15px;font-weight:300;line-height:1.65;letter-spacing:.005em;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body.is-locked{overflow:hidden}
+img{display:block;max-width:100%;height:auto;background:var(--bone)}
+svg{display:block}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+ul{margin:0;padding:0;list-style:none}
+h1,h2,h3,p,figure,blockquote,dl,dd{margin:0}
+::selection{background:rgba(162,96,63,.24)}
+:focus-visible{outline:2px solid var(--clay);outline-offset:4px}
+.container{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.section{padding-block:var(--section)}
+section[id]{scroll-margin-top:calc(var(--header) + 18px)}
+.eyebrow{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-55)}
+.eyebrow--light{color:var(--cream-60)}
+.display{font-family:var(--display);font-weight:300;line-height:.94;letter-spacing:-.02em}
+.display em{font-style:italic;color:var(--clay)}
+.display--xl{font-size:clamp(52px,9vw,146px);line-height:.88}
+.display--lg{font-size:clamp(40px,6.2vw,92px)}
+.display--md{font-size:clamp(30px,3.8vw,56px)}
+.display--light{color:var(--cream)}
+.display--light em{color:var(--sand)}
+.lead{font-size:clamp(15px,1.15vw,17px);line-height:1.75;color:var(--ink-70);max-width:46ch}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.7rem;height:54px;padding:0 32px;border:1px solid var(--ink);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);overflow:hidden;isolation:isolate;transition:color .5s var(--ease),border-color .5s var(--ease)}
+.btn>span,.btn>svg{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;z-index:0;background:var(--ink);transform:translateY(101%);transition:transform .55s var(--ease)}
+.btn:hover{color:var(--ivory)}
+.btn:hover::before{transform:none}
+.btn svg{width:14px;height:14px;transition:transform .45s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+.btn--solid{background:var(--ink);color:var(--ivory)}
+.btn--solid::before{background:var(--clay)}
+.btn--solid:hover{color:#fff;border-color:var(--clay)}
+.btn--block{width:100%}
+.btn[disabled]{opacity:.4;pointer-events:none}
+.link-underline{display:inline-flex;align-items:center;gap:.6rem;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding-bottom:4px;border-bottom:1px solid currentColor;transition:opacity .35s var(--ease),gap .35s var(--ease)}
+.link-underline:hover{opacity:.6;gap:.9rem}
+.link-underline svg{width:14px;height:14px}
+.announce{background:var(--ink);color:var(--cream-60);overflow:hidden}
+.announce__track{display:flex;width:max-content;animation:marquee 46s linear infinite}
+.announce__group{display:flex;align-items:center;gap:28px;padding:9px 14px;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap}
+.announce__group i{width:3px;height:3px;border-radius:50%;background:var(--cream-30)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.header{position:sticky;top:0;z-index:60;background:rgba(245,240,232,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:border-color .4s,background .4s}
+.header.is-stuck{border-color:var(--ink-14);background:rgba(245,240,232,.95)}
+.header__inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:var(--header);gap:16px}
+.header__nav{display:none;align-items:center;gap:clamp(18px,2.4vw,36px)}
+.header__link{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;padding-block:6px;color:var(--ink-70);transition:color .3s}
+.header__link:hover{color:var(--ink)}
+.header__logo{font-family:var(--display);font-size:clamp(19px,2vw,24px);letter-spacing:.26em;text-transform:uppercase;white-space:nowrap;text-align:center}
+.header__logo span{color:var(--clay)}
+.header__actions{display:flex;align-items:center;justify-content:flex-end;gap:4px}
+.icon-btn{position:relative;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;transition:background .3s}
+.icon-btn:hover{background:var(--ink-08)}
+.icon-btn svg{width:18px;height:18px}
+.icon-btn--burger{display:grid}
+.bag-count{position:absolute;top:6px;right:5px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:var(--ink);color:var(--ivory);font-size:9px;line-height:16px;text-align:center;opacity:0;transform:scale(.6);transition:opacity .3s,transform .3s}
+.bag-count.is-on{opacity:1;transform:scale(1)}
+@media(min-width:1024px){.header__nav{display:flex}.icon-btn--burger{display:none}}
+@media(max-width:420px){.header__inner{gap:6px}.header__logo{font-size:14.5px;letter-spacing:.16em}.icon-btn{width:38px;height:38px}}
+.mobile-nav{position:fixed;inset:0;z-index:90;display:grid;grid-template-rows:auto 1fr auto;background:var(--ink);color:var(--cream);clip-path:inset(0 0 100% 0);transition:clip-path .75s var(--ease);pointer-events:none}
+.mobile-nav.is-open{clip-path:inset(0);pointer-events:auto}
+.mobile-nav__top{display:flex;align-items:center;justify-content:space-between;height:var(--header);padding-inline:var(--gutter);border-bottom:1px solid var(--cream-16)}
+.mobile-nav__links{display:flex;flex-direction:column;justify-content:center;padding-inline:var(--gutter)}
+.mobile-nav__link{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-block:clamp(12px,2.6vw,22px);border-bottom:1px solid var(--cream-16);font-family:var(--display);font-size:clamp(30px,7vw,44px);line-height:1;opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.mobile-nav__link small{font-family:var(--sans);font-size:9px;letter-spacing:.2em;color:var(--cream-30)}
+.mobile-nav.is-open .mobile-nav__link{opacity:1;transform:none}
+.mobile-nav__link:nth-child(2){transition-delay:.08s}
+.mobile-nav__link:nth-child(3){transition-delay:.16s}
+.mobile-nav__link:nth-child(4){transition-delay:.24s}
+.mobile-nav__link:nth-child(5){transition-delay:.32s}
+.mobile-nav__foot{display:flex;flex-wrap:wrap;gap:12px 28px;padding:24px var(--gutter) 32px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-60)}
+.hero{position:relative;padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(48px,6vw,88px);overflow:hidden}
+.hero__watermark{position:absolute;left:-.06em;top:38%;font-family:var(--display);font-size:clamp(180px,34vw,560px);line-height:.6;color:transparent;-webkit-text-stroke:1px rgba(23,20,15,.055);pointer-events:none;user-select:none;z-index:0}
+.hero__grid{position:relative;z-index:1;display:grid;gap:clamp(32px,5vw,72px);align-items:end}
+.hero__title{margin-top:clamp(18px,2.4vw,30px)}
+.hero__lead{margin-top:clamp(20px,2.6vw,30px)}
+.hero__actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:clamp(26px,3.2vw,40px)}
+.hero__meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:clamp(30px,4vw,52px);padding-top:20px;border-top:1px solid var(--ink-14);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-55)}
+.hero__media{position:relative;overflow:hidden;background:var(--bone)}
+.hero__media img{width:100%;height:clamp(380px,62vh,720px);object-fit:cover;transform:scale(1.04);transition:transform 1.8s var(--ease)}
+.hero__media:hover img{transform:scale(1.07)}
+.hero__caption{position:absolute;left:0;bottom:0;max-width:300px;padding:16px 20px;background:rgba(245,240,232,.92);backdrop-filter:blur(8px);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-70);line-height:1.7}
+.hero__caption b{display:block;font-weight:400;color:var(--ink);letter-spacing:.22em}
+@media(min-width:900px){.hero__grid{grid-template-columns:minmax(0,1fr) minmax(0,1.02fr)}.hero__title{max-width:12ch}}
+.statement{background:var(--paper);border-block:1px solid var(--ink-08)}
+.statement__grid{display:grid;gap:clamp(32px,5vw,72px);align-items:start}
+.statement__text{font-family:var(--display);font-size:clamp(28px,3.4vw,50px);line-height:1.12;letter-spacing:-.015em;max-width:22ch}
+.statement__text em{font-style:italic;color:var(--clay)}
+.statement__cols{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.pillar__num{display:block;font-family:var(--display);font-size:13px;color:var(--clay)}
+.pillar__title{margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.pillar__text{margin-top:10px;font-size:13px;line-height:1.7;color:var(--ink-55)}
+@media(min-width:900px){.statement__grid{grid-template-columns:1.1fr .9fr}}
+.section-head{margin-bottom:clamp(32px,4vw,58px)}
+.section-head__row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 40px;margin-top:18px}
+.section-head__text{max-width:38ch;font-size:13px;line-height:1.75;color:var(--ink-55)}
+.filters{display:flex;gap:22px;margin-bottom:clamp(24px,3vw,38px);border-bottom:1px solid var(--ink-14);padding-bottom:18px;overflow-x:auto;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filter{flex:0 0 auto;position:relative;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-35);padding:4px 0;transition:color .3s}
+.filter::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:1px;background:var(--ink);transform:scaleX(0);transition:transform .4s var(--ease)}
+.filter:hover,.filter.is-active{color:var(--ink)}
+.filter.is-active::after{transform:scaleX(1)}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,3.4vw,46px) clamp(14px,1.8vw,28px)}
+@media(min-width:1024px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.product{transition:opacity .4s,transform .4s}
+.product.is-hidden{display:none}
+.product.is-fading{opacity:0;transform:translateY(8px)}
+.product__media{position:relative;display:block;width:100%;overflow:hidden;aspect-ratio:3/4;background:var(--bone);text-align:left}
+.product__media img{width:100%;height:100%;object-fit:cover;transform:scale(1.01);transition:transform 1.4s var(--ease)}
+.product:hover .product__media img{transform:scale(1.06)}
+.product__badge{position:absolute;top:12px;left:12px;padding:6px 10px;background:var(--ivory);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase}
+.product__quick{position:absolute;left:0;right:0;bottom:0;padding:15px 12px;background:rgba(251,248,243,.94);backdrop-filter:blur(6px);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;text-align:center;transform:translateY(100%);transition:transform .5s var(--ease)}
+.product:hover .product__quick,.product:focus-within .product__quick{transform:none}
+.product__info{display:flex;flex-direction:column;gap:3px;padding-top:14px}
+@media(min-width:600px){.product__info{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:12px}}
+.product__name{font-size:13px;font-weight:400}
+.product__cat{margin-top:3px;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-35)}
+.product__price{font-size:12.5px;white-space:nowrap;color:var(--ink-70)}
+.atelier{background:var(--bone);overflow:hidden}
+.atelier__grid{display:grid;gap:clamp(40px,5vw,80px);align-items:center}
+.atelier__media{position:relative;padding-bottom:clamp(30px,6vw,70px)}
+.atelier__main{width:88%;aspect-ratio:4/5;object-fit:cover}
+.atelier__detail{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:1/1;object-fit:cover;border:8px solid var(--bone)}
+.atelier__text{max-width:52ch}
+.atelier__text p+p{margin-top:18px}
+.atelier__signature{margin-top:30px;font-family:var(--display);font-style:italic;font-size:22px;color:var(--clay)}
+@media(min-width:900px){.atelier__grid{grid-template-columns:1.05fr .95fr}}
+.lookbook{background:var(--ink);color:var(--cream);overflow:hidden}
+.lookbook__head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
+.lookbook__track{display:flex;gap:clamp(14px,2vw,28px);margin-top:clamp(30px,4vw,52px);padding-inline:var(--gutter);padding-bottom:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.lookbook__track::-webkit-scrollbar{display:none}
+.look{flex:0 0 clamp(240px,32vw,460px);scroll-snap-align:start}
+.look__media{display:block;width:100%;aspect-ratio:3/4;overflow:hidden;background:#241f19}
+.look__media img{width:100%;height:100%;object-fit:cover;opacity:.92;transition:transform 1.5s var(--ease),opacity .6s}
+.look__media:hover img{transform:scale(1.05);opacity:1}
+.look__caption{display:flex;justify-content:space-between;gap:12px;padding-top:12px;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-60)}
+.look__caption b{font-weight:400;color:var(--cream)}
+.visit{background:var(--bone)}
+.visit__grid{display:grid;gap:clamp(36px,5vw,72px);align-items:center}
+.visit__media{aspect-ratio:4/3;overflow:hidden}
+.visit__media img{width:100%;height:100%;object-fit:cover}
+.visit__list{margin-top:32px;border-top:1px solid var(--ink-14)}
+.visit__row{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:14px 0;border-bottom:1px solid var(--ink-14);font-size:13px}
+.visit__row dt{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-35)}
+.visit__row dd{text-align:right}
+.visit__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+@media(min-width:900px){.visit__grid{grid-template-columns:1fr 1fr}}
+.footer{background:var(--ink);color:var(--cream);border-top:1px solid var(--cream-16)}
+.footer__grid{display:grid;gap:40px;padding-block:clamp(48px,6vw,80px) clamp(30px,4vw,48px)}
+.footer__brand{max-width:320px}
+.footer__wordmark{font-family:var(--display);font-size:clamp(26px,3vw,34px);letter-spacing:.22em;line-height:1}
+.footer__wordmark span{color:var(--sand)}
+.footer__about{margin-top:18px;font-size:12.5px;line-height:1.8;color:var(--cream-60)}
+.footer__col-title{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream-30)}
+.footer__links{margin-top:16px;display:grid;gap:10px}
+.footer__links a{font-size:12.5px;color:var(--cream-60);width:fit-content;transition:color .3s}
+.footer__links a:hover{color:var(--cream)}
+.footer__socials{display:flex;gap:10px;margin-top:18px}
+.footer__social{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--cream-16);border-radius:50%;color:var(--cream-60);transition:background .3s,color .3s}
+.footer__social:hover{background:var(--cream);color:var(--ink)}
+.footer__social svg{width:16px;height:16px}
+.footer__bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding-block:22px;border-top:1px solid var(--cream-16);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-30)}
+.footer__concept{color:var(--cream-60)}
+@media(min-width:800px){.footer__grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.scrim{position:fixed;inset:0;z-index:100;background:rgba(20,17,13,.5);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .45s}
+.scrim.is-open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:110;width:min(460px,100%);display:flex;flex-direction:column;background:var(--paper);transform:translateX(102%);transition:transform .65s var(--ease)}
+.drawer.is-open{transform:none}
+.drawer__head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:24px;border-bottom:1px solid var(--ink-14)}
+.drawer__title{font-family:var(--display);font-size:26px;line-height:1}
+.drawer__sub{margin-top:8px;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-35)}
+.drawer__body{flex:1;overflow-y:auto;padding:0 24px}
+.drawer__foot{border-top:1px solid var(--ink-14);padding:22px 24px 26px}
+.drawer__close{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--ink-14);border-radius:50%}
+.drawer__close:hover{background:var(--ink-08)}
+.drawer__close svg{width:15px;height:15px}
+.cart-item{display:grid;grid-template-columns:74px 1fr auto;gap:14px;padding:18px 0;border-bottom:1px solid var(--ink-08)}
+.cart-item__img{width:74px;height:96px;object-fit:cover}
+.cart-item__name{font-size:12.5px}
+.cart-item__meta{margin-top:3px;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-35)}
+.cart-item__price{font-size:12.5px;text-align:right;white-space:nowrap}
+.cart-item__controls{display:flex;align-items:center;gap:12px;margin-top:10px}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--ink-14)}
+.qty button{width:26px;height:26px;display:grid;place-items:center;font-size:13px;color:var(--ink-55)}
+.qty button:hover{background:var(--ink-08);color:var(--ink)}
+.qty span{width:26px;text-align:center;font-size:11px}
+.cart-item__remove{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-35)}
+.cart-item__remove:hover{color:var(--clay)}
+.cart-summary{display:grid;gap:8px;font-size:12.5px}
+.cart-summary__row{display:flex;justify-content:space-between;color:var(--ink-55)}
+.cart-summary__total{display:flex;justify-content:space-between;margin-top:8px;padding-top:12px;border-top:1px solid var(--ink-14);font-size:15px;color:var(--ink)}
+.cart-empty{padding:64px 0;text-align:center}
+.cart-empty p{margin-top:14px;font-size:13px;color:var(--ink-55)}
+.modal{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .4s}
+.modal.is-open{opacity:1;pointer-events:auto}
+.modal__backdrop{position:absolute;inset:0;background:rgba(20,17,13,.55);backdrop-filter:blur(4px)}
+.modal__panel{position:relative;width:min(940px,100%);max-height:92svh;overflow-y:auto;background:var(--paper);transform:translateY(26px) scale(.985);transition:transform .55s var(--ease)}
+.modal.is-open .modal__panel{transform:none}
+.modal__close{position:absolute;top:14px;right:14px;z-index:2;display:grid;place-items:center;width:40px;height:40px;background:var(--paper);border-radius:50%;border:1px solid var(--ink-14)}
+.modal__close svg{width:15px;height:15px}
+.qv{display:grid}
+.qv__media{aspect-ratio:4/5;overflow:hidden;background:var(--bone)}
+.qv__media img{width:100%;height:100%;object-fit:cover}
+.qv__body{padding:28px 24px 34px}
+.qv__title{margin-top:10px}
+.qv__price{margin-top:10px;font-size:14px;color:var(--ink-70)}
+.qv__desc{margin-top:18px;font-size:12.5px;line-height:1.8;color:var(--ink-55)}
+.qv__label{display:flex;justify-content:space-between;gap:12px;margin-top:26px;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-35)}
+.sizes{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.size{min-width:46px;height:40px;padding:0 12px;border:1px solid var(--ink-14);font-size:11px;transition:background .25s,color .25s,border-color .25s}
+.size:hover{border-color:var(--ink)}
+.size.is-active{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.qv__add{margin-top:26px}
+.qv__note{margin-top:14px;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-35);line-height:1.9}
+@media(min-width:780px){.qv{grid-template-columns:1fr 1fr}.qv__media{aspect-ratio:auto;height:100%;min-height:560px}.qv__body{padding:46px 40px}}
+.toasts{position:fixed;left:var(--gutter);bottom:22px;z-index:160;display:grid;gap:10px;pointer-events:none}
+.toast{display:flex;align-items:center;gap:10px;max-width:340px;padding:13px 18px;background:var(--ink);color:var(--cream);font-size:11.5px;box-shadow:0 18px 40px -22px rgba(0,0,0,.7);animation:toast-in .45s var(--ease)}
+.toast svg{width:14px;height:14px;color:var(--sand);flex:none}
+@keyframes toast-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0ms)}
+.reveal--scale{transform:scale(.955)}
+.reveal.is-visible{opacity:1;transform:none}
+.product__media img,.look__media img,.hero__media img,.atelier__media img,.visit__media img{filter:saturate(.9) contrast(1.03) brightness(.99)}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .announce__track{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="link-underline" href="#collection" style="position:fixed;top:12px;left:12px;z-index:200;padding:12px 18px;background:var(--ink);color:var(--cream);border:0;transform:translateY(-180%)">Skip to content</a>
+
+<div class="announce" aria-hidden="true">
+  <div class="announce__track">
+    <div class="announce__group">
+      <span>Complimentary shipping over 50 000 ₸</span><i></i>
+      <span>Collection 04 — now in the atelier</span><i></i>
+      <span>Private fittings by appointment</span><i></i>
+      <span>Made in Almaty, in small runs</span><i></i>
+    </div>
+    <div class="announce__group">
+      <span>Complimentary shipping over 50 000 ₸</span><i></i>
+      <span>Collection 04 — now in the atelier</span><i></i>
+      <span>Private fittings by appointment</span><i></i>
+      <span>Made in Almaty, in small runs</span><i></i>
+    </div>
+  </div>
+</div>
+
+<header class="header" id="siteHeader">
+  <div class="container header__inner">
+    <nav class="header__nav" aria-label="Primary">
+      <a class="header__link" href="#collection">Collection</a>
+      <a class="header__link" href="#atelier">Atelier</a>
+      <a class="header__link" href="#lookbook">Lookbook</a>
+      <a class="header__link" href="#visit">Visit</a>
+    </nav>
+    <a class="header__logo" href="#top" aria-label="MAISON ÉCRU — home">MAISON <span>ÉCRU</span></a>
+    <div class="header__actions">
+      <button class="icon-btn" type="button" data-open-cart aria-label="Open shopping bag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="bag-count" data-bag-count aria-hidden="true">0</span>
+      </button>
+      <button class="icon-btn icon-btn--burger" type="button" data-open-nav aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><path d="M3 7h18"/><path d="M3 12h18"/><path d="M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="mobile-nav__top">
+    <span class="header__logo">MAISON <span>ÉCRU</span></span>
+    <button class="icon-btn" type="button" data-close-nav aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-nav__links" aria-label="Mobile">
+    <a class="mobile-nav__link" href="#collection" data-close-nav>Collection <small>06 pieces</small></a>
+    <a class="mobile-nav__link" href="#atelier" data-close-nav>Atelier <small>Since 2019</small></a>
+    <a class="mobile-nav__link" href="#lookbook" data-close-nav>Lookbook <small>AW 25</small></a>
+    <a class="mobile-nav__link" href="#visit" data-close-nav>Visit <small>Almaty</small></a>
+  </nav>
+  <div class="mobile-nav__foot">
+    <span>132 Dostyk Ave, Almaty</span>
+    <a href="tel:+77272501232">+7 727 250 12 32</a>
+    <a href="mailto:atelier@maison-ecru.kz">atelier@maison-ecru.kz</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero" id="top">
+    <span class="hero__watermark" aria-hidden="true">ÉCRU</span>
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow reveal">Autumn / Winter 2025 — Collection 04</p>
+        <h1 class="display display--xl hero__title reveal" style="--d:90ms">The art of<br /><em>quiet</em> dressing.</h1>
+        <p class="lead hero__lead reveal" style="--d:180ms">Considered silhouettes, natural fibres and a palette borrowed from late autumn. Designed in Almaty and produced in small runs by makers we know by name.</p>
+        <div class="hero__actions reveal" style="--d:260ms">
+          <a class="btn btn--solid" href="#collection"><span>Explore the collection</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+          <a class="link-underline" href="#visit">Visit the atelier</a>
+        </div>
+        <p class="hero__meta reveal" style="--d:340ms"><span>New pieces every second Thursday</span><span>Natural fibres only</span><span>Repairs for life</span></p>
+      </div>
+      <figure class="hero__media reveal reveal--scale" style="--d:160ms">
+        <img src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=1400&q=80" alt="Model in a blush wool overcoat walking through a stone arcade" width="1400" height="1750" fetchpriority="high" />
+        <figcaption class="hero__caption"><b>The blush overcoat</b>Double-faced wool, hand-finished seams, made in a run of forty.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section statement">
+    <div class="container statement__grid">
+      <h2 class="statement__text reveal">Fewer, better pieces — <em>made to be worn for a decade</em>, not a season.</h2>
+      <div class="statement__cols">
+        <div class="pillar reveal" style="--d:80ms"><span class="pillar__num">01</span><h3 class="pillar__title">Natural fibres</h3><p class="pillar__text">Wool from Biella, silk from Como, linen from Normandy.</p></div>
+        <div class="pillar reveal" style="--d:160ms"><span class="pillar__num">02</span><h3 class="pillar__title">Small runs</h3><p class="pillar__text">Twenty to sixty pieces per style. When a run is gone, it is gone.</p></div>
+        <div class="pillar reveal" style="--d:240ms"><span class="pillar__num">03</span><h3 class="pillar__title">Repair for life</h3><p class="pillar__text">We re-line, re-button and re-stitch — free of charge, forever.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="collection">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">02 — Collection</p>
+        <div class="section-head__row">
+          <h2 class="display display--lg">New in, <em>quietly</em>.</h2>
+          <p class="section-head__text">Six pieces for the cold months. Each one cut from a single length of cloth, finished by hand in our Almaty workroom.</p>
+        </div>
+      </header>
+      <div class="filters reveal" role="group" aria-label="Filter products">
+        <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="outerwear" aria-pressed="false">Outerwear</button>
+        <button class="filter" type="button" data-filter="knitwear" aria-pressed="false">Knitwear</button>
+        <button class="filter" type="button" data-filter="tailoring" aria-pressed="false">Tailoring</button>
+        <button class="filter" type="button" data-filter="accessories" aria-pressed="false">Accessories</button>
+      </div>
+      <div class="products">
+        <article class="product reveal" data-category="outerwear" data-id="wool-overcoat" data-name="Wool Overcoat" data-price="189000" data-cat="Outerwear" data-image="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=80" data-sizes="XS,S,M,L,XL" data-desc="A long coat in a soft windowpane wool, cut with a dropped shoulder and deep pockets. Fully lined in cupro so it slips over knitwear.">
+          <button class="product__media" type="button" data-quick-view aria-label="Quick view: Wool Overcoat">
+            <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=80" alt="Long windowpane-check wool coat worn on a city street" width="900" height="1200" loading="lazy" />
+            <span class="product__quick">Quick add</span>
+          </button>
+          <div class="product__info"><div><h3 class="product__name">Wool Overcoat</h3><p class="product__cat">Outerwear</p></div><p class="product__price">189 000 ₸</p></div>
+        </article>
+        <article class="product reveal" style="--d:70ms" data-category="outerwear" data-id="silk-bomber" data-name="Silk Bomber Jacket" data-price="124000" data-cat="Outerwear" data-image="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=900&q=80" data-sizes="XS,S,M,L" data-desc="Sandwashed silk in a faded terracotta, cut with a soft shoulder and a ribbed hem. Light enough to travel folded in a bag.">
+          <button class="product__media" type="button" data-quick-view aria-label="Quick view: Silk Bomber Jacket">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=900&q=80" alt="Terracotta silk bomber jacket on a wooden hanger" width="900" height="1200" loading="lazy" />
+            <span class="product__badge">New</span><span class="product__quick">Quick add</span>
+          </button>
+          <div class="product__info"><div><h3 class="product__name">Silk Bomber Jacket</h3><p class="product__cat">Outerwear</p></div><p class="product__price">124 000 ₸</p></div>
+        </article>
+        <article class="product reveal" style="--d:140ms" data-category="knitwear" data-id="cashmere-poncho" data-name="Cashmere Poncho" data-price="98000" data-cat="Knitwear" data-image="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=80" data-sizes="One size" data-desc="A single-length knit in undyed Mongolian cashmere, finished with a hand-tied fringe. One size, worn three ways.">
+          <button class="product__media" type="button" data-quick-view aria-label="Quick view: Cashmere Poncho">
+            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=80" alt="Cream cashmere poncho with a fringed edge on a hanger" width="900" height="1200" loading="lazy" />
+            <span class="product__quick">Quick add</span>
+          </button>
+          <div class="product__info"><div><h3 class="product__name">Cashmere Poncho</h3><p class="product__cat">Knitwear</p></div><p class="product__price">98 000 ₸</p></div>
+        </article>
+        <article class="product reveal" data-category="tailoring" data-id="tapered-trousers" data-name="Tapered Trousers" data-price="78000" data-cat="Tailoring" data-image="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=80" data-sizes="XS,S,M,L,XL" data-desc="High-rise trousers in a washed cotton twill, tapered to a soft cuff at the ankle. Two deep pockets and a hook closure.">
+          <button class="product__media" type="button" data-quick-view aria-label="Quick view: Tapered Trousers">
+            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=80" alt="Model wearing high-rise tapered trousers in dusty rose" width="900" height="1200" loading="lazy" />
+            <span class="product__quick">Quick add</span>
+          </button>
+          <div class="product__info"><div><h3 class="product__name">Tapered Trousers</h3><p class="product__cat">Tailoring</p></div><p class="product__price">78 000 ₸</p></div>
+        </article>
+        <article class="product reveal" style="--d:70ms" data-category="accessories" data-id="top-handle-bag" data-name="Top-Handle Bag" data-price="124000" data-cat="Accessories" data-image="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80" data-sizes="One size" data-desc="Vegetable-tanned calf leather in a deep scarlet, with hand-burnished edges and a suede lining. Fits a 13-inch laptop.">
+          <button class="product__media" type="button" data-quick-view aria-label="Quick view: Top-Handle Bag">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80" alt="Structured scarlet leather top-handle bag" width="900" height="1200" loading="lazy" />
+            <span class="product__quick">Quick add</span>
+          </button>
+          <div class="product__info"><div><h3 class="product__name">Top-Handle Bag</h3><p class="product__cat">Accessories</p></div><p class="product__price">124 000 ₸</p></div>
+        </article>
+        <article class="product reveal" style="--d:140ms" data-category="accessories" data-id="gold-band" data-name="Gold Band" data-price="42000" data-cat="Accessories" data-image="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" data-sizes="One size" data-desc="A pair of slim bands in solid 18k gold, made to be stacked or worn alone. Sizes 50 to 58, resized in the atelier at no charge.">
+          <button class="product__media" type="button" data-quick-view aria-label="Quick view: Gold Band">
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Two slim gold rings photographed on a pale surface" width="900" height="1200" loading="lazy" />
+            <span class="product__badge">New</span><span class="product__quick">Quick add</span>
+          </button>
+          <div class="product__info"><div><h3 class="product__name">Gold Band</h3><p class="product__cat">Accessories</p></div><p class="product__price">42 000 ₸</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section atelier" id="atelier">
+    <div class="container atelier__grid">
+      <div class="atelier__media reveal reveal--scale">
+        <img class="atelier__main" src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=80" alt="Cream coats on a rail in the MAISON ÉCRU workroom" width="1000" height="1250" loading="lazy" />
+        <img class="atelier__detail" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="White shirts on a rail in the atelier" width="600" height="600" loading="lazy" />
+      </div>
+      <div class="atelier__text">
+        <p class="eyebrow reveal">03 — The atelier</p>
+        <h2 class="display display--md reveal" style="--d:80ms">Cut by hand, in a room <em>above the shop</em>.</h2>
+        <p class="lead reveal" style="--d:150ms;margin-top:22px">Six people, four sewing machines and a cutting table that has been in the family since 1994. We make everything here — from the first paper pattern to the last buttonhole.</p>
+        <p class="lead reveal" style="--d:210ms;margin-top:16px">Every piece is fitted on three different bodies before it goes into production, because a silhouette only works if it works on more than one person.</p>
+        <p class="atelier__signature reveal" style="--d:280ms">— Aigerim, founder</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section lookbook" id="lookbook">
+    <div class="container lookbook__head">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--light">04 — Lookbook</p>
+        <h2 class="display display--lg display--light" style="margin-top:16px">Five looks,<br /><em>one palette</em>.</h2>
+      </div>
+    </div>
+    <div class="lookbook__track" tabindex="0" aria-label="Lookbook">
+      <figure class="look">
+        <div class="look__media"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Model in a burgundy wool coat carrying shopping bags" width="900" height="1200" loading="lazy" /></div>
+        <figcaption class="look__caption"><b>Look 01</b><span>Burgundy wool</span></figcaption>
+      </figure>
+      <figure class="look">
+        <div class="look__media"><img src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=900&q=80" alt="Man in a dark tailored suit adjusting his cuff" width="900" height="1200" loading="lazy" /></div>
+        <figcaption class="look__caption"><b>Look 02</b><span>Tailoring, softened</span></figcaption>
+      </figure>
+      <figure class="look">
+        <div class="look__media"><img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=900&q=80" alt="Model in a brown leather jacket on a city street" width="900" height="1200" loading="lazy" /></div>
+        <figcaption class="look__caption"><b>Look 03</b><span>Leather, worn in</span></figcaption>
+      </figure>
+      <figure class="look">
+        <div class="look__media"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=80" alt="Close-up of a delicate gold necklace on skin" width="900" height="1200" loading="lazy" /></div>
+        <figcaption class="look__caption"><b>Look 04</b><span>Vermeil, close</span></figcaption>
+      </figure>
+      <figure class="look">
+        <div class="look__media"><img src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=900&q=80" alt="Model in a blush overcoat walking through a stone arcade" width="900" height="1200" loading="lazy" /></div>
+        <figcaption class="look__caption"><b>Look 05</b><span>Blush, quietly</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section visit" id="visit">
+    <div class="container visit__grid">
+      <div class="reveal reveal--scale"><div class="visit__media"><img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1100&q=80" alt="Inside the MAISON ÉCRU atelier — white walls, clothing rails and a pendant light" width="1100" height="825" loading="lazy" /></div></div>
+      <div>
+        <p class="eyebrow reveal">05 — Visit</p>
+        <h2 class="display display--md reveal" style="--d:70ms">The room on <em>Dostyk</em>.</h2>
+        <p class="lead reveal" style="--d:140ms;margin-top:18px">Come for a fitting, stay for tea. We keep the atelier open late on Thursdays and set aside the back room for private appointments.</p>
+        <dl class="visit__list reveal" style="--d:210ms">
+          <div class="visit__row"><dt>Address</dt><dd>132 Dostyk Avenue, Almaty</dd></div>
+          <div class="visit__row"><dt>Mon — Fri</dt><dd>10:00 — 20:00</dd></div>
+          <div class="visit__row"><dt>Sat — Sun</dt><dd>11:00 — 19:00</dd></div>
+          <div class="visit__row"><dt>Appointments</dt><dd><a href="tel:+77272501232">+7 727 250 12 32</a></dd></div>
+        </dl>
+        <div class="visit__actions reveal" style="--d:280ms">
+          <a class="btn btn--solid" href="mailto:atelier@maison-ecru.kz?subject=Private%20fitting"><span>Book a fitting</span></a>
+          <a class="btn" href="https://2gis.kz/almaty" target="_blank" rel="noopener"><span>Get directions</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <p class="footer__wordmark">MAISON <span>ÉCRU</span></p>
+        <p class="footer__about">A small-batch clothing atelier in Almaty. Natural fibres, considered silhouettes, and a promise to repair what we make — for as long as you wear it.</p>
+        <div class="footer__socials">
+          <a class="footer__social" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+          <a class="footer__social" href="mailto:atelier@maison-ecru.kz" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__col-title">Shop</p>
+        <nav class="footer__links" aria-label="Shop"><a href="#collection">New in</a><a href="#collection">Outerwear</a><a href="#collection">Knitwear</a><a href="#collection">Tailoring</a><a href="#collection">Accessories</a></nav>
+      </div>
+      <div>
+        <p class="footer__col-title">House</p>
+        <nav class="footer__links" aria-label="House"><a href="#atelier">The atelier</a><a href="#lookbook">Lookbook</a><a href="#visit">Visit us</a><a href="#visit">Repairs &amp; care</a></nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Contact</p>
+        <nav class="footer__links" aria-label="Contact"><a href="mailto:atelier@maison-ecru.kz">atelier@maison-ecru.kz</a><a href="tel:+77272501232">+7 727 250 12 32</a><a href="#visit">132 Dostyk Ave, Almaty</a></nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2025</span> Maison Écru — Almaty, Kazakhstan</span>
+      <span class="footer__concept">Concept website by WER1X</span>
+    </div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping bag" hidden>
+  <div class="drawer__head">
+    <div><h2 class="drawer__title">Your bag</h2><p class="drawer__sub" id="cartCountLabel">0 items</p></div>
+    <button class="drawer__close" type="button" data-close-cart aria-label="Close bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  </div>
+  <div class="drawer__body" id="cartBody"></div>
+  <div class="drawer__foot" id="cartFoot"></div>
+</aside>
+
+<div class="modal" id="quickView" role="dialog" aria-modal="true" aria-labelledby="qvTitle" hidden>
+  <div class="modal__backdrop" data-close-quick></div>
+  <div class="modal__panel">
+    <button class="modal__close" type="button" data-close-quick aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="qv">
+      <div class="qv__media"><img id="qvImage" alt="" /></div>
+      <div class="qv__body">
+        <p class="eyebrow" id="qvCat">—</p>
+        <h2 class="display" id="qvTitle" style="font-size:clamp(26px,2.6vw,36px);margin-top:10px">—</h2>
+        <p class="qv__price" id="qvPrice">—</p>
+        <p class="qv__desc" id="qvDesc">—</p>
+        <div class="qv__label"><span>Size</span><span id="qvHint">Select a size</span></div>
+        <div class="sizes" id="qvSizes" role="group" aria-label="Choose a size"></div>
+        <button class="btn btn--solid btn--block qv__add" id="qvAdd" type="button" disabled><span>Add to bag</span></button>
+        <p class="qv__note">Complimentary delivery over 50 000 ₸ · 14-day returns</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<script>
+(function(){
+  'use strict';
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var money = function(n){ return Number(n).toLocaleString('en-US').replace(/,/g, ' ') + ' ₸'; };
+
+  function toast(text){
+    var host = $('#toasts'); if(!host) return;
+    var el = document.createElement('div');
+    el.className = 'toast';
+    el.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span></span>';
+    el.querySelector('span').textContent = text;
+    host.appendChild(el);
+    setTimeout(function(){
+      el.style.transition = 'opacity .35s, transform .35s';
+      el.style.opacity = '0'; el.style.transform = 'translateY(8px)';
+      setTimeout(function(){ el.remove(); }, 360);
+    }, 2600);
+  }
+
+  function openOverlay(el, focusSel){
+    if(!el) return;
+    el.hidden = false;
+    void el.offsetWidth;
+    el.classList.add('is-open');
+    document.body.classList.add('is-locked');
+    if(el.id === 'cartDrawer' && $('#scrim')) $('#scrim').classList.add('is-open');
+    if(focusSel){ setTimeout(function(){ var f = $(focusSel, el); if(f) f.focus(); }, 60); }
+  }
+  function closeOverlay(el){
+    if(!el) return;
+    el.classList.remove('is-open');
+    if(el.id === 'cartDrawer' && $('#scrim')) $('#scrim').classList.remove('is-open');
+    document.body.classList.remove('is-locked');
+    setTimeout(function(){ if(!el.classList.contains('is-open')) el.hidden = true; }, 600);
+  }
+
+  var header = $('#siteHeader');
+  function onScroll(){ header.classList.toggle('is-stuck', window.scrollY > 12); }
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  var nav = $('#mobileNav');
+  $('[data-open-nav]').addEventListener('click', function(){ openOverlay(nav, '[data-close-nav]'); });
+  $$('[data-close-nav]').forEach(function(b){ b.addEventListener('click', function(){ closeOverlay(nav); }); });
+
+  var items = $$('.reveal');
+  if(reduced || !('IntersectionObserver' in window)){
+    items.forEach(function(el){ el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  var filters = $$('.filter'), cards = $$('.product'), timers = new Map();
+  filters.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filters.forEach(function(b){ b.classList.toggle('is-active', b === btn); b.setAttribute('aria-pressed', String(b === btn)); });
+      var v = btn.dataset.filter;
+      cards.forEach(function(card){
+        clearTimeout(timers.get(card));
+        var match = v === 'all' || card.dataset.category === v;
+        if(match){ card.classList.remove('is-hidden'); requestAnimationFrame(function(){ card.classList.remove('is-fading'); }); }
+        else { card.classList.add('is-fading'); timers.set(card, setTimeout(function(){ card.classList.add('is-hidden'); card.classList.remove('is-fading'); }, 240)); }
+      });
+    });
+  });
+
+  var products = cards.map(function(card){
+    return { id: card.dataset.id, name: card.dataset.name, cat: card.dataset.cat, price: Number(card.dataset.price),
+      image: card.dataset.image, sizes: card.dataset.sizes.split(',').map(function(s){ return s.trim(); }),
+      desc: card.dataset.desc };
+  });
+  var active = null, size = null;
+  var qv = $('#quickView');
+
+  function openQuick(id){
+    var p = null;
+    products.forEach(function(x){ if(x.id === id) p = x; });
+    if(!p) return;
+    active = p; size = null;
+    $('#qvImage').src = p.image; $('#qvImage').alt = p.name;
+    $('#qvTitle').textContent = p.name; $('#qvCat').textContent = p.cat;
+    $('#qvPrice').textContent = money(p.price); $('#qvDesc').textContent = p.desc;
+    var box = $('#qvSizes'); box.innerHTML = ''; $('#qvAdd').disabled = true; $('#qvHint').textContent = 'Select a size';
+    p.sizes.forEach(function(s){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'size'; b.textContent = s; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click', function(){
+        size = s;
+        $$('.size', box).forEach(function(n){ n.classList.toggle('is-active', n === b); n.setAttribute('aria-pressed', String(n === b)); });
+        $('#qvAdd').disabled = false; $('#qvHint').textContent = 'True to size';
+      });
+      box.appendChild(b);
+    });
+    if(p.sizes.length === 1) box.firstElementChild.click();
+    openOverlay(qv, '[data-close-quick]');
+  }
+  $$('[data-quick-view]').forEach(function(btn){
+    btn.addEventListener('click', function(){ openQuick(btn.closest('.product').dataset.id); });
+  });
+  $$('[data-close-quick]').forEach(function(b){ b.addEventListener('click', function(){ closeOverlay(qv); }); });
+
+  var bag = [];
+  try { bag = JSON.parse(localStorage.getItem('ecru-bag') || '[]'); } catch(e){ bag = []; }
+  if(!Array.isArray(bag)) bag = [];
+  var drawer = $('#cartDrawer'), scrim = $('#scrim');
+
+  function persist(){ try{ localStorage.setItem('ecru-bag', JSON.stringify(bag)); }catch(e){} }
+  function count(){ return bag.reduce(function(s,i){ return s + i.qty; }, 0); }
+  function total(){ return bag.reduce(function(s,i){ return s + i.price * i.qty; }, 0); }
+
+  function renderBag(){
+    var body = $('#cartBody'), foot = $('#cartFoot'), badge = $('[data-bag-count]');
+    var n = count();
+    badge.textContent = n; badge.classList.toggle('is-on', n > 0);
+    $('#cartCountLabel').textContent = n + (n === 1 ? ' item' : ' items');
+    if(!bag.length){
+      body.innerHTML = '<div class="cart-empty"><p style="font-family:var(--display);font-size:24px;">Your bag is empty</p><p>Pieces you add will be reserved for 60 minutes.</p><button class="btn btn--solid" type="button" data-shop style="margin-top:22px"><span>Explore the collection</span></button></div>';
+      foot.innerHTML = ''; return;
+    }
+    body.innerHTML = bag.map(function(i){
+      return '<div class="cart-item">' +
+        '<img class="cart-item__img" src="' + i.image + '" alt="' + i.name + '" />' +
+        '<div><p class="cart-item__name">' + i.name + '</p><p class="cart-item__meta">Size ' + i.size + '</p>' +
+        '<div class="cart-item__controls"><div class="qty">' +
+        '<button type="button" data-qty="-1" data-id="' + i.id + '" data-size="' + i.size + '" aria-label="Decrease">−</button>' +
+        '<span>' + i.qty + '</span>' +
+        '<button type="button" data-qty="1" data-id="' + i.id + '" data-size="' + i.size + '" aria-label="Increase">+</button>' +
+        '</div><button class="cart-item__remove" type="button" data-remove data-id="' + i.id + '" data-size="' + i.size + '">Remove</button></div></div>' +
+        '<p class="cart-item__price">' + money(i.price * i.qty) + '</p></div>';
+    }).join('');
+    foot.innerHTML = '<div class="cart-summary"><div class="cart-summary__row"><span>Subtotal</span><span>' + money(total()) + '</span></div>' +
+      '<div class="cart-summary__row"><span>Delivery</span><span>' + (total() >= 50000 ? 'Complimentary' : 'Calculated at checkout') + '</span></div>' +
+      '<div class="cart-summary__total"><span>Total</span><span>' + money(total()) + '</span></div></div>' +
+      '<button class="btn btn--solid btn--block" type="button" id="checkout" style="margin-top:20px"><span>Proceed to checkout</span></button>' +
+      '<p style="margin-top:14px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-35);">Secure payment · 14-day returns · Free repairs</p>';
+  }
+
+  function addToBag(p, s){
+    var found = null;
+    bag.forEach(function(i){ if(i.id === p.id && i.size === s) found = i; });
+    if(found) found.qty += 1;
+    else bag.push({ id: p.id, name: p.name, price: p.price, image: p.image, size: s, qty: 1 });
+    persist(); renderBag(); toast(p.name + ' added to your bag');
+  }
+
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-open-cart]')){ renderBag(); openOverlay(drawer, '[data-close-cart]'); return; }
+    if(e.target.closest('[data-close-cart]') || e.target === scrim){ closeOverlay(drawer); return; }
+    if(e.target.closest('[data-shop]')){ closeOverlay(drawer); var c = $('#collection'); if(c) c.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' }); return; }
+    var qtyBtn = e.target.closest('[data-qty]');
+    if(qtyBtn){
+      var d = Number(qtyBtn.dataset.qty);
+      bag.forEach(function(i){ if(i.id === qtyBtn.dataset.id && i.size === qtyBtn.dataset.size) i.qty += d; });
+      bag = bag.filter(function(i){ return i.qty > 0; });
+      persist(); renderBag(); return;
+    }
+    var rm = e.target.closest('[data-remove]');
+    if(rm){
+      bag = bag.filter(function(i){ return !(i.id === rm.dataset.id && i.size === rm.dataset.size); });
+      persist(); renderBag(); toast('Removed from your bag'); return;
+    }
+    if(e.target.closest('#checkout')){
+      bag = []; persist(); renderBag();
+      var body = $('#cartBody');
+      body.innerHTML = '<div class="cart-empty"><p style="font-family:var(--display);font-size:26px;">Thank you</p><p>Your order is confirmed. We will call to confirm the delivery window.</p></div>';
+      $('#cartFoot').innerHTML = '';
+      toast('Order placed');
+      return;
+    }
+    if(e.target.closest('#qvAdd')){
+      if(!active || !size) return;
+      addToBag(active, size);
+      closeOverlay(qv);
+      setTimeout(function(){ renderBag(); openOverlay(drawer, '[data-close-cart]'); }, 160);
+      return;
+    }
+  });
+
+  $('#scrim').addEventListener('click', function(){ closeOverlay(drawer); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      if(qv.classList.contains('is-open')) closeOverlay(qv);
+      else if(drawer.classList.contains('is-open')) closeOverlay(drawer);
+      else if(nav.classList.contains('is-open')) closeOverlay(nav);
+    }
+  });
+
+  $('#year').textContent = new Date().getFullYear();
+  renderBag();
+})();
+</script>
+</body>
+</html>
